@@ -120,3 +120,79 @@ In a * 1:2 :
 [1] 1 4 3 8
 > 1:4 * c(1,2,1,2)
 [1] 1 4 3 8
+>
+> # B.3.3
+> y[1]
+[1] 8.3
+> y[1:3]
+[1]  8.3  8.6 10.7
+> y > mean(y)
+ [1] FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+ [9]  TRUE  TRUE
+> y[y > mean(y)]
+[1] 10.7 10.8 11.0 11.0 11.1 11.2 11.3 11.4
+> a <- c(5, 3, 6, NA)
+> a
+[1]  5  3  6 NA
+> is.na(a)
+[1] FALSE FALSE FALSE  TRUE
+> !is.na(a)
+[1]  TRUE  TRUE  TRUE FALSE
+> a[!is.na(a)]
+[1] 5 3 6
+> na.exclude(a)
+[1] 5 3 6
+attr(,"na.action")
+[1] 4
+attr(,"class")
+[1] "exclude"
+> help("na.exclude")
+Error in body[[1]] : object of type 'symbol' is not subsettable
+> na.pass(a)
+[1]  5  3  6 NA
+> print(a)
+[1]  5  3  6 NA
+> print(a,na.rm)
+Error in print.default(a, na.rm) : object 'na.rm' not found
+> na.action(a)
+NULL
+> print(a, na.rm = TRUE)
+[1]  5  3  6 NA
+> print(a, na.rm = FALSE)
+[1]  5  3  6 NA
+> mean(a)
+[1] NA
+> mean(a, na.rm = TRUE)
+[1] 4.666667
+> c <- c(a,1)
+> c
+[1]  5  3  6 NA  1
+> na.exclude(c)
+[1] 5 3 6 1
+attr(,"na.action")
+[1] 4
+attr(,"class")
+[1] "exclude"
+> d <- c(5, NA, 2, 5, 6)
+> na.exclude(d)
+[1] 5 2 5 6
+attr(,"na.action")
+[1] 2
+attr(,"class")
+[1] "exclude"
+> help("na.action")
+> class(d)
+[1] "numeric"
+> class("NA")
+[1] "character"
+> class(NA)
+[1] "logical"
+> class(exclude)
+Error: object 'exclude' not found
+> mean(a)
+[1] NA
+> mean(a, na.rm = TRUE)
+[1] 4.666667
+> d <- na.exclude(a)
+> mean(d)
+[1] 4.666667
