@@ -1,0 +1,18 @@
+{
+    "contents" : "#Exercise \n#1) Write a for loop statements so that it runs from 1:9 and prints the following output to your screen\n\n",
+    "created" : 1442430528276.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1242375493",
+    "id" : "1CA47C89",
+    "lastKnownWriteTime" : 1442430726,
+    "path" : "~/GitHub/QBC/bootcamp exercise 1.R",
+    "project_path" : "bootcamp exercise 1.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
