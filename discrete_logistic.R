@@ -18,3 +18,17 @@ discreteLogisticFun <- function(N0, Rd, KK, ttmax=10){
 discreteLogisticFun(N0=10, Rd=0.5, KK=100)
 discreteLogisticFun(N0=10, Rd=0.9, KK=100)
 discreteLogisticFun(N0=10, Rd=0.1, KK=100)
+
+
+#mini exercise 3.3.2
+
+#make vector for each Rd value
+vectRd = c(-0.3, 0.3, 1.3, 1.9, 2.2, 2.7)
+
+par(mfrow = c(2, 3))
+
+#loop discreteLogisticFun over each element of vectRd
+for (ii in 1:length(vectRd)){
+  discreteLogisticFun(N0 = 10, K = 100, Rd = ii)
+}
+
