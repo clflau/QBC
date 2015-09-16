@@ -54,3 +54,24 @@ for(tt in 1:ttmax){
 }
 print(NN)
 plot(1:(ttmax+1),NN, xlab="time", ylab="N", col="blue")
+
+
+#####################################################
+geometricGrowthFun <- function(N0, RR, ttmax=10){
+  #initialize variable to a vector of NA values
+  NN <- matrix(NA, nrow = 1, ncol = ttmax+1)
+  NN[1] <- N0
+  
+  #use a loop to iterate the model the desired number of times
+  for(tt in 1:ttmax){
+    NN[tt+1] <- RR*NN[tt]
+  }
+  print(NN)
+  plot(1:(ttmax+1),NN, xlab="time", ylab="N", col="blue")
+}
+
+geometricGrowthFun(N0 = 10, RR = 0.95)
+
+rm(list = ls())
+source("bootcamp_functions.R")
+geometricGrowthFun(N0 = 200, RR = .5, ttmax = 20)
