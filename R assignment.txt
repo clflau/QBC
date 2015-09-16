@@ -244,4 +244,33 @@ Error: unexpected ')' in "M[, 2)"
 [1,]    1    3
 [2,]    2    4
 > # skip simple matrix algebra
-> 
+>  
+> # B.3.5
+> dat <- data.frame(species = c("S.altissima", "S.rugosa", "E.graminifolia", "A.pilosus"), treatment = factor(c("Control", "Water", "Control", "Water")), height = c(1.1, 0.8, 0.9, 1), width = c(1, 1.7, 0.6, 0.2))
+> dat
+         species treatment height width
+1    S.altissima   Control    1.1   1.0
+2       S.rugosa     Water    0.8   1.7
+3 E.graminifolia   Control    0.9   0.6
+4      A.pilosus     Water    1.0   0.2
+> dat[2, ]
+   species treatment height width
+2 S.rugosa     Water    0.8   1.7
+> dat[3, 4]
+[1] 0.6
+> dat[, 2] == "Water"
+[1] FALSE  TRUE FALSE  TRUE
+> dat[dat[, 2] == "Water"]
+  treatment width
+1   Control   1.0
+2     Water   1.7
+3   Control   0.6
+4     Water   0.2
+> dat[dat[, 2] == "Water",]
+    species treatment height width
+2  S.rugosa     Water    0.8   1.7
+4 A.pilosus     Water    1.0   0.2
+> subset(dat, treatment == "Water")
+    species treatment height width
+2  S.rugosa     Water    0.8   1.7
+4 A.pilosus     Water    1.0   0.2
