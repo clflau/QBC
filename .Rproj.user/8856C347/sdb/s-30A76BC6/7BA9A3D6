@@ -1,12 +1,12 @@
 {
-    "contents" : "library(ape)\nlibrary(geiger)\nlibrary(ggplot2)\n",
+    "contents" : "#This is my scratch script for practicing R\n\nlibrary(ape)\nlibrary(ggplot2)\nlibrary(geiger)\n\n",
     "created" : 1442421897022.000,
-    "dirty" : true,
+    "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1300562216",
+    "hash" : "354010901",
     "id" : "7BA9A3D6",
-    "lastKnownWriteTime" : 1442421940,
+    "lastKnownWriteTime" : 1442422789,
     "path" : "~/GitHub/QBC/my_first_script.R",
     "project_path" : "my_first_script.R",
     "properties" : {
