@@ -1,0 +1,18 @@
+{
+    "contents" : "library(ape)\nlibrary(geiger)\nlibrary(ggplot2)\n",
+    "created" : 1442421897022.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1300562216",
+    "id" : "7BA9A3D6",
+    "lastKnownWriteTime" : 1442421940,
+    "path" : "~/GitHub/QBC/my_first_script.R",
+    "project_path" : "my_first_script.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
