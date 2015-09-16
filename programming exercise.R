@@ -40,8 +40,8 @@ print(N)
 #setup: none needed
 
 #set initial conditions and parameter values
-N0 <- 100
-RR <- 1.05
+N0 <- 200
+RR <- 1/1.05
 ttmax<- 10
 
 #initialize variable to a vector of NA values
