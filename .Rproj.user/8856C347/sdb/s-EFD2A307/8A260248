@@ -1,10 +1,10 @@
 {
-    "contents" : "# B.2 Assignment\na <- 2 + 3\na\nb <- a + a\na + a; a + b\n\n",
+    "contents" : "# B.2 Assignment\na <- 2 + 3\na\nb <- a + a\na + a; a + b\n\n# B.3\n##B.3.1\ny <- c(8.3, 8.6, 10.7, 10.8, 11, 11, 11.1, 11.2, 11.3, 11.4)\n",
     "created" : 1442350951304.000,
     "dirty" : true,
     "encoding" : "",
     "folds" : "",
-    "hash" : "2572920180",
+    "hash" : "2723890060",
     "id" : "8A260248",
     "lastKnownWriteTime" : 7011605692497750387,
     "path" : null,
