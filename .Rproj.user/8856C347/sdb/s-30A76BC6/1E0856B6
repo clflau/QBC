@@ -1,0 +1,18 @@
+{
+    "contents" : "#Pseudo-code exercise\n\n#################################\n\n#question:\n#The geometric growth model is the simplest model for population\n#growth in discrete time. It assumes that every year the size of the\n#population changes by the same factor, R.\n#N(t+1) = R * N(t)\n#Exercise: write pseudo-code for a program that simulates the\n#growth of a population for 10 years, starting with N=100 animals and\n#assuming R = 1.05, and prints the final population size.\n\n#ans:\n#assign N=100 and R=1.05\n#for loop over t for 10 years\n  #assign N to R*N \n#print final N\n\nN <-100\nR <-1.05\nfor(t in 1:10){\n  N = R*N\n}\nprint(N)\n\n#Bonus: modify the pseudo-code so the program will make a plot of\n#N versus t.\n\n#ans:\n#assign N=100 and R=1.05\n#initialize a vector NN to hold all values of N through time (fill it with NA values, set first element to 100)\n#for loop over t for 10 years\n  #assign each element of NN to R*NN\n#plot the NN vector against time\n\n#geometricGrowthScrip.R\n#a script to simulate and plot the discrete logistic model\n\n#setup: none needed\n\n#set initial conditions and parameter values\nN0 <- 200\nRR <- 1/1.05\nttmax<- 10\n\n#initialize variable to a vector of NA values\nNN <- matrix(NA, nrow = 1, ncol = ttmax+1)\nNN[1] <- N0\n\n#use a loop to iterate the model the desired number of times\nfor(tt in 1:ttmax){\n  NN[tt+1] <- RR*NN[tt]\n}\nprint(NN)\nplot(1:(ttmax+1),NN, xlab=\"time\", ylab=\"N\", col=\"blue\")\n\n\n#####################################################\ngeometricGrowthFun <- function(N0, RR, ttmax=10){\n  #initialize variable to a vector of NA values\n  NN <- matrix(NA, nrow = 1, ncol = ttmax+1)\n  NN[1] <- N0\n  \n  #use a loop to iterate the model the desired number of times\n  for(tt in 1:ttmax){\n    NN[tt+1] <- RR*NN[tt]\n  }\n  print(NN)\n  plot(1:(ttmax+1),NN, xlab=\"time\", ylab=\"N\", col=\"blue\")\n}\n\ngeometricGrowthFun(N0 = 10, RR = 0.95)\n\nrm(list = ls())\nsource(\"bootcamp_functions.R\")\ngeometricGrowthFun(N0 = 200, RR = .5, ttmax = 20)\n\n\n",
+    "created" : 1442436362005.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1224215444",
+    "id" : "1E0856B6",
+    "lastKnownWriteTime" : 1442442832,
+    "path" : "~/GitHub/QBC/programming exercise.R",
+    "project_path" : "programming exercise.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
