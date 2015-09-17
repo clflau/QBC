@@ -12,10 +12,10 @@
 
 # Set working directory:
 #change this to whatever you want
-setwd("~/Dropbox/Kirk_stuff/KEL_bootcamp/2014")
+setwd("C:/Users/Tharsis/Documents/GitHub/QBC")
 
 # Load a data set
-snpsDataFrame=read.table('hapmap_CEU_r23a_chr2_ld.txt',header=TRUE)
+snpsDataFrame=read.table('hapmap-data.txt',header=TRUE)
 
 # What are the dimensions of the data?
 dim(snpsDataFrame)
@@ -42,7 +42,7 @@ snps=as.matrix(snpsDataFrame)
 # With row names we can easily extract certain SNPs using the id's
 testSNP=snps["rs218206_G",]
 
-table(testSNP)
+table(testSNP) #counts of different value
 
 # What is proportion of heterozygotes at this locus?
 het=sum(testSNP==1)/length(testSNP)
@@ -51,9 +51,9 @@ het=sum(testSNP==1)/length(testSNP)
 testSNP=snps["rs6717613_A",]
 
 # Try these commands
-table(testSNP)
+table(testSNP) #table() ignores NA
 testSNP==1
-length(testSNP)
+length(testSNP) #length() counts NA
 is.na(testSNP)
 
 # Now let's compute the observed heterozygosity
@@ -83,11 +83,11 @@ freq=apply(snps,1,calc_freq)
 het=apply(snps,1,calc_het)
 
 # And now we can make exploratory plots
-plot(freq,het,xlab="Frequency",ylab="Heterozygosity")  # Scatter plot
+plot(freq,het,xlab="Frequency",ylab="Heterozygosity", pch=19, col="green")  # Scatter plot
 
 # Let's add a line to show what relationship we'd expect under Hardy-Weinberg expectations
 p=seq(0,0.5,by=0.05)   # Set-up a vector with a sequence of allele frequencies
-points(p,2*p*(1-p),type="l",col=2) # Plot the HW expectation as a line in red
+points(p,2*p*(1-p),type="l", col=2) # Plot the HW expectation as a line in red
 
 
 ## APPYLING A CHI-SQUARE TEST TO EACH SNP TO FORMALLY LOOK FOR DEPARTURES FROM HARDY-WEINBERG EXPECTATIONS ###

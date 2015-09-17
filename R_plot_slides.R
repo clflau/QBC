@@ -109,6 +109,9 @@ legend(6,350,c(expression(paste(sigma,"=3")),expression(paste(sigma,"=6"))),col=
 
 dev.off()
 
+#find the % of values in s1 that are >3
+mean(s1>3)
+
 
 #Simple scatterplot:
 pdf(file="C:/Users/Tharsis/Documents/GitHub/QBC/scatter_small.pdf", width=10,height=10); #open the file
@@ -118,14 +121,14 @@ par(mfrow=c(1,1), mar=c(4, 4, 3, 2)) #sets plotting area and margins
 x<-rnorm(100)
 y<-x+rnorm(100,sd=0.2)
 
-plot(x,y,pch=19)
+plot(x,y,pch=19)  #pch= symbols for scatter-points, 19=filled circles
 
 dev.off()
 
 
 #now, try again, make the labels bigger:
 #Simple scatterplot:
-pdf(file="/Users/kirk/Dropbox/Kirk_stuff/KEL_bootcamp/scatter_large.pdf", width=10,height=10); #open the file
+pdf(file="C:/Users/Tharsis/Documents/GitHub/QBC/scatter_large.pdf", width=10,height=10); #open the file
 
 par(mfrow=c(1,1), mar=c(5, 5, 3, 2)) #sets plotting area and margins
 
@@ -176,7 +179,7 @@ counts_0.1<-hist(p_0.1,breaks=breaks)$counts
 counts_0.6<-hist(p_0.6,breaks=breaks)$counts
 
 #now make the plot:
-pdf(file="/Users/kirk/Dropbox/Kirk_stuff/KEL_bootcamp/binomial_barplot.pdf", width=6,height=6); #open the file
+pdf(file="C:/Users/Tharsis/Documents/GitHub/QBC/binomial_barplot.pdf", width=6,height=6); #open the file
 
 par(mfrow=c(1,1), mar=c(4, 4, 3, 2)) #sets plotting area and margins
 
