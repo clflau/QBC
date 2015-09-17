@@ -8,3 +8,9 @@ for(ii in 1:9){
   else cat("*")
 }
 
+#2) Modify your for loop so that it prints 10 asterisks, with each asterisk separated by exactly one ampersand sign (&), with no spaces or new line characters.
+
+for(ii in 1:10){
+  cat("*", "&", sep = "")
+}
+
