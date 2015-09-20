@@ -103,7 +103,31 @@ for (j in 1:5){
   }
 }
 
+#8) use a while loop to sum all numbers from 1:17. You will need to use a counter variable (like index seen in class).
 
+seq17 <- seq(1:17)
+length(seq17)
+xx <- 0
+ii <- 0
+while(ii < 17){
+  xx <- xx + seq17[ii + 1];
+  ii <- ii + 1
+}
+xx
+
+#9) write a function takes a number, and prints 'small' if number less than or equal to -1; 'medium' if between -1 and + 1'big' if greater than or equal to + 1
+
+smmdbg <- function(xx){
+  if(xx <= -1){
+    cat("small");
+  }
+  if(xx > -1 & xx < 1){
+    cat("medium");
+  }
+  if(xx >= 1){
+    cat("big")
+  }
+}
 
 
 
