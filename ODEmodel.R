@@ -60,7 +60,7 @@ plot(logGrowthHarvOutput[,1], logGrowthHarvOutput[,2], col="green", type="l")
 
 init <- 1
 tseq <- seq(0, 20, by=0.01)
-pars <- c(rr = 0.2, kk = 100, hh = 0.9)
+pars <- c(rr = 0.8, kk = 100, hh = 0.9)
 
 ICVec <- seq(0, 200, by=10)
 plot(x=NULL, y=NULL, xlim=c(1,max(tseq)), ylim=c(0,2*pars["kk"]), xlab="time",
