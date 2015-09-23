@@ -163,7 +163,7 @@ sig_geno<-snps[sig_snp_ids,]
 # then search our list of 
 
 # Read in phenotype data file
-z=read.table("pheno.sim.2014.txt",header=TRUE)
+z=read.table("pheno.sim.2014-1.txt.txt",header=TRUE)
 # Extract the glucose level column as our phenotype of interest
 pheno=z$glucose_mmolperL
 # Check length is equal to number of individuals
